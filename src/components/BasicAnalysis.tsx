@@ -49,12 +49,12 @@ export const BasicAnalysis = ({ data }: BasicAnalysisProps) => {
               marker: { color: '#a3895d' }
             }]}
             layout={{
-              title: { text: 'Grayscale Statistics' },
+              title: 'Grayscale Statistics',
               height: 240,
               paper_bgcolor: '#fdfcf5',
               plot_bgcolor: '#fdfcf5',
               margin: { l: 40, r: 20, t: 40, b: 40 }
-            }}
+            } as any}
             config={{ responsive: true }}
             style={{ width: '100%' }}
           />
@@ -71,12 +71,12 @@ export const BasicAnalysis = ({ data }: BasicAnalysisProps) => {
               marker: { color: ['#ff4d4d', '#4dff4d', '#4d4dff'] }
             }]}
             layout={{
-              title: { text: 'Mean Color Values' },
+              title: 'Mean Color Values',
               height: 240,
               paper_bgcolor: '#fdfcf5',
               plot_bgcolor: '#fdfcf5',
               margin: { l: 40, r: 20, t: 40, b: 40 }
-            }}
+            } as any}
             config={{ responsive: true }}
             style={{ width: '100%' }}
           />
@@ -92,14 +92,14 @@ export const BasicAnalysis = ({ data }: BasicAnalysisProps) => {
               { x: data.histogram.bins, y: data.histogram.b, name: 'Blue', mode: 'lines', line: { color: 'blue' } }
             ]}
             layout={{
-              title: { text: 'Color Histograms' },
+              title: 'Color Histograms',
               height: 260,
               paper_bgcolor: '#fdfcf5',
               plot_bgcolor: '#fdfcf5',
               margin: { l: 40, r: 20, t: 40, b: 40 },
               xaxis: { title: 'Pixel Value' },
               yaxis: { title: 'Count' }
-            }}
+            } as any}
             config={{ responsive: true }}
             style={{ width: '100%' }}
           />
